@@ -16,7 +16,7 @@ export default function Posts({ posts }: Props) {
   )
 }
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts")
+  const res = await fetch ("https://jsonplaceholder.typicode.com/posts")
   const posts: Post[] = await res.json()
   return { props: { posts},
   }     

@@ -11,7 +11,7 @@ export default function TaskForm({refresh}:any){
   refresh()
  }
 
- return(
+ return(    
   <div className="flex">
    <input className="border" placeholder="Enter task" value={title} onChange={(e)=>setTitle(e.target.value)}/>
    <button onClick={addTask} className="bg-blue-500 text-white"> Add
