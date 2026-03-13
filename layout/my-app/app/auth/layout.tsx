@@ -5,5 +5,5 @@ export default function login({children}: {children:ReactNode}){
         <div>
         {children}
     </div>
-    )
+    )   
 }

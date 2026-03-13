@@ -1,17 +1,22 @@
 import Link from "next/link";
+
 export default function Sidebar() {
+  const menuItems = [
+    {name: "User List", href: "/dashboard/user" },
+    {name: "Admin Panel", href: "/dashboard/admin" },
+    { name: "user Gallery", href: "/img" },
+  ];
+
   return (
-    <aside style={{ width: "200px", background: "#dadff5", height:"670px", margin:"10px"}}>
-      <ul>
-        <li>
-          <Link href="/dashboard/admin">Admin</Link>
-        </li>
-        <li>
-          <Link href="/dashboard/manager">Manager</Link>
-        </li>
-        <li>
-          <Link href="/dashboard/user">User</Link>
-        </li>
+    <aside className="w-64 bg-[#dadff5] p-4 m-2 h-full min-h-[calc(100vh-64px)]">
+      <ul className="space-y-2">
+        {menuItems.map((item) => (
+          <li key={item.href}>
+            <Link  href={item.href}  className="block p-2 hover:bg-blue-500 hover:text-white rounded transition-colors">
+              {item.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </aside>
   );

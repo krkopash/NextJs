@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./globals.css";
 import { ReactNode } from "react";
 export const metadata = {
   title: "Multi Role Dashboard",
