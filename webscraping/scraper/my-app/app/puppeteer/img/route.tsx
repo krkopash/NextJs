@@ -10,9 +10,6 @@ export async function GET(): Promise<NextResponse> {
   const imgBuffer = await page.screenshot({ fullPage:true, type:"png"});
   await browser.close();
   return new NextResponse(imgBuffer, {
-    headers: {
-      "Content-Type": "image/png",
-      "Content-Disposition": "attachment; filename.png",
-    },
+    headers: { "Content-Type": "image/png", "Content-Disposition": "attachment; filename.png", },
   });
 }

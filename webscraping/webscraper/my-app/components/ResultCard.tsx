@@ -8,7 +8,13 @@ export default function ResultCard({ data }: any) {
       <p>Load Time: {data.loadTime} ms</p>
       <p>Page Size: {data.pageSize} bytes</p>
       <p>Images: {data.images}</p>
-      <p>Scripts: {data.scripts}</p>
+      <p>Scripts: {data.scripts}</p><br/><hr/>
+
+      <br/><p>issues:</p>
+      <ul className="list-disc ml-5">
+          {data.issues.map((issue: string, i: number) => (
+            <li key={i}>{issue}</li>))}
+        </ul>
     </div>
   );
 }

@@ -16,8 +16,8 @@ const data = await res.json();
   };
 
   return (
-    <main className="p-10 max-w-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6"> website analyzer</h1>
+    <main>
+      <h1> website analyzer</h1>
       <UrlForm onAnalyze={analyze} />
       <ResultCard data={result} />
     </main>

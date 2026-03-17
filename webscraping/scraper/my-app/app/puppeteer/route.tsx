@@ -11,8 +11,7 @@ export async function GET(): Promise<NextResponse> {
   const pdfBuffer = await page.pdf({ format: "A4",});
   await browser.close();
   return new NextResponse(pdfBuffer, {
-    headers: {
-      "Content-Type": "application/pdf",
+    headers: {"Content-Type": "application/pdf",
       "Content-Disposition": "attachment; filename.pdf",
     },
   });
