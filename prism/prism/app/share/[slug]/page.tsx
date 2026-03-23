@@ -29,8 +29,7 @@ export default function SharePage({ params }: { params: Promise<{ slug: string }
     try {
       if (slug) {
         let base64 = slug.replace(/-/g, '+').replace(/_/g, '/')
-        while (base64.length % 4 !== 0) {
-          base64 += '='
+        while (base64.length % 4 !== 0) { base64 += '='
         }
         const decodedB64 = atob(base64)
         const decodedURI = decodeURIComponent(decodedB64)
